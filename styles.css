@@ -1,0 +1,225 @@
+:root {
+    --main-white: #f6f6f3;
+    --font-principal: 'Doppio One', sans-serif;
+    --font-nav: 'M PLUS 1p', sans-serif;
+    --font-cuerpo: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    box-shadow: 0 2px 0 rgb(0 0 0 / 40%);
+    z-index: 10;
+    font-family: var(--font-nav);
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 2rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.nav-list a {
+    display: block;
+    font-size: 1.8rem;
+    padding: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+}
+
+h1 {
+    font-family: var(--font-principal);
+    font-size: 5.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.welcome-section>p {
+    font-size: 3rem;
+    font-weight: 200;
+    font-style: italic;
+    color: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+.projects-section {
+    text-align: center;
+    padding: 10rem 2rem;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+.projects-section-header {
+    font-family: var(--font-cuerpo);
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+}
+
+h2 {
+    font-size: 4.5rem;
+    color: white;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+.project {
+    background: var(--main-gray);
+    box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
+    border-radius: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+.project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.project-title {
+    font-family: var(--font-cuerpo);
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+}
+
+.contact-section-header>h2 {
+    font-family: var(--font-cuerpo);
+    font-size: 4.5rem;
+    color: black;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.contact-details {
+    font-family: var(--font-cuerpo);
+    font-size: 2rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+    flex-basis: 150px;
+}
+
+.contact-details:hover {
+    transform: translateY(-10px);
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2em;
+    border-radius: 2px;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    border-top: 4px solid var(--main-red);
+}
+
+footer>p {
+    font-size: 1.5rem;
+    margin: 2rem;
+}
+
+@media (max-width: 650px) {
+    .nav {
+        justify-content: center;
+    }
+
+    .nav-list {
+        margin: 0 1rem;
+    }
+
+    .projects-section-header {
+        font-size: 4rem;
+    }
+
+    .contact-section-header>h2 {
+        font-size: 4rem;
+    }
+
+}
